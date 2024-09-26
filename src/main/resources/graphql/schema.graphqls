@@ -1,0 +1,15 @@
+type Employee{
+    empId:ID!,
+    empName:String,
+    role:String,
+    contact:String
+}
+type Query{
+    getAllEmployee:[Employee],
+    getById(empId:ID!):Employee
+}
+type Mutation{
+    create(empName:String,role:String,contact:String):Employee,
+    update(empId:ID!,empName:String,role:String,contact:String):Employee,
+    delete(empId:ID!):Employee
+}
